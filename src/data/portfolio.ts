@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Nobel Ahmad Badhon",
-  title: "Full Stack Developer Enthusiast & Problem Solver",
+  title: "Full Stack Developer & Dedicated Problem Solver",
   subtitle: "Solved 2000+ problems across multiple platforms • Building scalable web applications",
   email: "nobel.badhon@example.com",
   location: "Sylhet, Bangladesh",
@@ -123,4 +123,47 @@ export const navigationItems = [
   { name: "Projects", href: "#projects" },
   { name: "Achievements", href: "#achievements" },
   { name: "Contact", href: "#contact" }
+];
+
+export const hackathonAchievements = [
+  {
+    title: "HackTheAI Hackathon - Grand Final",
+    subtitle: "Inter-University National Hackathon 2025",
+    location: "Green University of Bangladesh",
+    date: "September 2025",
+    position: "4th",
+    positionDetails: "50 Finalist Teams",
+    category: "Grand Final",
+    badge: "Powered by SmythOS",
+    description: "Developed Smart-IELTS, an AI-powered IELTS preparation platform using SmythOS agents. Secured 4th position in the grand final, competing against 50 top teams from universities across Bangladesh.",
+    technologies: ["SmythOS", "AI Agents", "React", "Node.js", "Machine Learning"],
+    team: {
+      name: "SUST_PROMPT_STORM",
+      members: [
+        {
+          name: "Md Ahasanul Haque Sazid",
+          role: "Develop Backend & Integrate SmythOS Agents",
+          linkedin: "https://www.linkedin.com/in/sazid-ux/"
+        },
+        {
+          name: "Abhishek Dash",
+          role: "Team Leader",
+          linkedin: "https://www.linkedin.com/in/abhishek-dash/"
+        },
+        {
+          name: "Badhon Ahmad",
+          role: "Idea Generation, Frontend & Backend Development",
+          linkedin: "https://www.linkedin.com/in/badhon-ahmad-5a5894225/"
+        }
+      ]
+    },
+    images: [
+      "/achievements/4th at final.png",
+      "/achievements/ach2.jpg",
+      "/achievements/ach3.jpg",
+      "/achievements/ach4.jpg",
+      "/achievements/ach5.jpg",
+      "/achievements/final photo.jpg"
+    ]
+  }
 ];

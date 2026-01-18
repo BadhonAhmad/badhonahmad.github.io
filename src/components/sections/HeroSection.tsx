@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { personalInfo } from "@/data/portfolio";
 import TypingAnimation from "@/components/ui/TypingAnimation";
+import AnimatedBackground from "@/components/ui/AnimatedBackground";
+import Image from "next/image";
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,10 +19,13 @@ export default function HeroSection() {
       id="home"
       className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-black opacity-20"></div>
+      <div className="absolute inset-0 bg-black opacity-40"></div>
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Animated background with mouse interaction */}
+      <AnimatedBackground />
+
+      {/* Original animated background elements (keeping for layered effect) */}
+      <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 2 }}>
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-purple-500 opacity-10 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-blue-500 opacity-10 animate-pulse delay-1000"></div>
       </div>
@@ -29,7 +34,22 @@ export default function HeroSection() {
         className={`text-center z-10 transform transition-all duration-1000 ${
           isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
+        style={{ zIndex: 10 }}
       >
+        {/* Profile Image with Floating Animation */}
+        <div className="flex justify-center mb-8">
+          <div className="animate-float">
+            <Image
+              src="/icons/my_image/me.jpg"
+              alt="Nobel Ahmad Badhon"
+              width={180}
+              height={180}
+              className="rounded-full"
+              priority
+            />
+          </div>
+        </div>
+
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
           Nobel Ahmad{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -93,12 +113,11 @@ export default function HeroSection() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a
-            href="https://drive.google.com/file/d/1E7EfUPTDAlZn1h2-Lk4rT44rIVvdeoJ-/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/cv/Badhon_SUST.pdf"
+            download
             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-full hover:from-purple-700 hover:to-pink-700 transition duration-300 font-semibold transform hover:scale-105"
           >
-            View My CV
+            Download CV
           </a>
           <a
             href="#contact"
@@ -109,7 +128,10 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+        style={{ zIndex: 10 }}
+      >
         <ChevronDownIcon className="h-8 w-8 text-white" />
       </div>
     </section>
