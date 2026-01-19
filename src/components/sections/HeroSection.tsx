@@ -44,7 +44,7 @@ export default function HeroSection() {
               alt="Nobel Ahmad Badhon"
               width={180}
               height={180}
-              className="rounded-full"
+              className="rounded-full object-cover aspect-square"
               priority
             />
           </div>

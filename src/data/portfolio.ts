@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Nobel Ahmad Badhon",
   title: "Full Stack Developer & Dedicated Problem Solver",
   subtitle: "Solved 2000+ problems across multiple platforms • Building scalable web applications",
-  email: "nobel.badhon@example.com",
+  email: "ahmadbadhon28@gmail.com",
   location: "Sylhet, Bangladesh",
   github: "https://github.com/BadhonAhmad",
   linkedin: "https://www.linkedin.com/in/badhon-ahmad-5a5894225/",
@@ -98,6 +98,22 @@ export const projects = [
   },
   {
     id: 3,
+    title: "SnapLink - URL Shortener",
+    subtitle: "Modern URL Shortening Application",
+    period: "2025",
+    description: "A modern, full-stack URL shortening web application with user authentication, analytics, and usage tracking. Built with Node.js, Express, Next.js, and SQLite.",
+    technologies: ["Node.js", "Express", "Next.js", "SQLite", "JWT"],
+    features: [
+      "Built user authentication system with JWT-based secure login and registration",
+      "Implemented URL shortening algorithm with custom short code generation",
+      "Developed analytics dashboard to track click counts, referrers, and usage patterns",
+      "Created user dashboard for managing shortened URLs with full CRUD operations"
+    ],
+    githubUrl: "https://github.com/BadhonAhmad/SnapLink",
+    videoUrl: "https://www.youtube.com/watch?v=mdbHcTmcLIY"
+  },
+  {
+    id: 4,
     title: "SmartPrescription",
     subtitle: "Modern Clinic Management System",
     period: "2025",
@@ -114,7 +130,7 @@ export const projects = [
     videoUrl: "https://www.youtube.com/watch?v=kcfUuJgYQJo"
   },
   {
-    id: 4,
+    id: 5,
     title: "ACCOMO Android App",
     subtitle: "Rented Resident Management Platform",
     period: "Mar-2024",
@@ -129,7 +145,7 @@ export const projects = [
     githubUrl: "https://github.com/BadhonAhmad/ACCOMO-Android-App"
   },
   {
-    id: 5,
+    id: 6,
     title: "Child Learning Web",
     subtitle: "Interactive Educational Platform for Children",
     period: "Dec-2023",

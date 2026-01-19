@@ -125,15 +125,15 @@ export default function SkillsSection() {
                   return (
                     <div
                       key={skillIndex}
-                      className="bg-gray-800 border border-gray-700 rounded-xl p-6 flex flex-col items-center justify-center space-y-3 hover:border-blue-500 hover:transform hover:scale-105 transition-all duration-300 group"
+                      className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 flex flex-col items-center justify-center space-y-3 hover:bg-white/20 hover:border-blue-400/60 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 group"
                     >
-                      <div className="p-3 rounded-lg bg-gray-700 group-hover:bg-gray-600 transition-colors duration-300">
+                      <div className="p-3 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors duration-300">
                         <IconComponent
-                          className="w-8 h-8 text-gray-300 group-hover:text-white transition-colors duration-300"
+                          className="w-8 h-8 transition-colors duration-300"
                           style={{ color: skill.color }}
                         />
                       </div>
-                      <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300 text-center">
+                      <span className="text-sm font-medium text-gray-200 group-hover:text-white transition-colors duration-300 text-center">
                         {skill.name}
                       </span>
                     </div>

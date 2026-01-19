@@ -18,7 +18,7 @@ export default function ProjectsSection() {
             <h2 className="text-4xl font-bold text-white">Project Portfolio</h2>
           </div>
           <p className="text-xl text-gray-300">
-            Major projects developed during university coursework and internship experiences
+            Major projects developed during university coursework and Hackathons
           </p>
         </div>
 
