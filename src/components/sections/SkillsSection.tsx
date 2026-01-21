@@ -103,37 +103,38 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Technical Skills
           </h2>
-          <p className="text-xl text-gray-300">
-            A curated set of languages, frameworks, and tools I excel at.
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Languages, frameworks, and tools I work with
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-10">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="space-y-6">
-              <h3 className="text-2xl font-bold text-blue-400 border-l-4 border-blue-400 pl-4">
+            <div key={categoryIndex}>
+              <h3 className="text-lg font-semibold text-blue-500 mb-5 flex items-center gap-2">
+                <span className="w-1 h-5 bg-blue-500 rounded-full"></span>
                 {category.title}
               </h3>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 {category.skills.map((skill, skillIndex) => {
                   const IconComponent = skill.icon;
                   return (
                     <div
                       key={skillIndex}
-                      className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 flex flex-col items-center justify-center space-y-3 hover:bg-white/20 hover:border-blue-400/60 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 group"
+                      className="bg-gray-800 border border-gray-700 rounded-xl p-5 flex flex-col items-center justify-center gap-3 hover:border-blue-500/50 transition-all duration-300"
                     >
-                      <div className="p-3 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors duration-300">
+                      <div className="p-2 rounded-lg bg-gray-900">
                         <IconComponent
-                          className="w-8 h-8 transition-colors duration-300"
+                          className="w-7 h-7"
                           style={{ color: skill.color }}
                         />
                       </div>
-                      <span className="text-sm font-medium text-gray-200 group-hover:text-white transition-colors duration-300 text-center">
+                      <span className="text-sm font-medium text-gray-300 text-center">
                         {skill.name}
                       </span>
                     </div>
@@ -145,17 +146,17 @@ export default function SkillsSection() {
         </div>
 
         {/* Problem Solving Stats */}
-        <div className="mt-16 bg-gray-800 border border-gray-700 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-blue-400 border-l-4 border-blue-400 pl-4 mb-6">
+        <div className="mt-12 bg-gray-800 border border-gray-700 rounded-xl p-8">
+          <h3 className="text-lg font-semibold text-blue-500 mb-4 flex items-center gap-2">
+            <span className="w-1 h-5 bg-blue-500 rounded-full"></span>
             Problem Solving
           </h3>
-          <div className="text-center">
-            <p className="text-lg text-gray-300 italic">
-              Solved over{" "}
-              <span className="text-purple-400 font-bold">2000+ problems</span>{" "}
-              across various competitive programming platforms.
-            </p>
-          </div>
+          <p className="text-gray-400 text-center">
+            Solved over{" "}
+            <span className="text-blue-500 font-semibold">2000+ problems</span>{" "}
+            across various competitive programming platforms including
+            Codeforces, CodeChef, LeetCode, and VJudge.
+          </p>
         </div>
       </div>
     </section>

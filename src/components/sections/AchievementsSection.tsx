@@ -10,28 +10,28 @@ export default function AchievementsSection() {
   );
 
   return (
-    <section id="achievements" className="py-20 bg-gray-900">
+    <section id="achievements" className="py-20 bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Achievements</h2>
-          <p className="text-xl text-gray-300">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Achievements</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Recognition and accomplishments in competitive programming and
             hackathons
           </p>
         </div>
 
         {/* Hackathon Achievements */}
-        <div className="mb-16">
+        <div className="mb-10">
           {hackathonAchievements.map((hackathon, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 mb-8 border border-gray-700 hover:border-blue-500 transition duration-300"
+              className="bg-gray-800 border border-gray-700 rounded-xl p-6 md:p-8 mb-6 hover:border-blue-500/50 transition-all duration-300"
             >
               {/* Header */}
-              <div className="flex items-start gap-6 mb-6">
-                <div className="bg-blue-600 p-4 rounded-2xl">
+              <div className="flex flex-col md:flex-row md:items-start gap-5 mb-6">
+                <div className="flex items-center justify-center w-14 h-14 bg-blue-600/20 rounded-xl flex-shrink-0">
                   <svg
-                    className="w-12 h-12 text-white"
+                    className="w-7 h-7 text-blue-500"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -39,16 +39,16 @@ export default function AchievementsSection() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-white mb-2">
+                  <h3 className="text-2xl font-semibold text-white mb-2">
                     {hackathon.title}
                   </h3>
-                  <p className="text-lg text-gray-300 mb-3">
+                  <p className="text-gray-400 text-base mb-3">
                     {hackathon.subtitle}
                   </p>
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-                    <span className="flex items-center gap-2">
+                  <div className="flex flex-wrap gap-4 text-xs text-gray-500">
+                    <span className="flex items-center gap-1">
                       <svg
-                        className="w-4 h-4"
+                        className="w-3.5 h-3.5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -56,9 +56,9 @@ export default function AchievementsSection() {
                       </svg>
                       {hackathon.location}
                     </span>
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-1">
                       <svg
-                        className="w-4 h-4"
+                        className="w-3.5 h-3.5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -68,7 +68,7 @@ export default function AchievementsSection() {
                     </span>
                   </div>
                   <div className="mt-3">
-                    <span className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm">
+                    <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">
                       {hackathon.badge}
                     </span>
                   </div>
@@ -76,38 +76,30 @@ export default function AchievementsSection() {
               </div>
 
               {/* Achievement Badge */}
-              <div className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-2xl p-6 mb-6 text-center border border-blue-700">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    🏆 Achievement
-                  </span>
-                </div>
-                <div className="text-5xl font-bold text-white mb-2">
-                  {hackathon.category} 🏆
-                </div>
-                <div className="text-6xl font-bold text-blue-300 mb-2">
+              <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-6 text-center">
+                <div className="text-4xl font-bold text-blue-500 mb-2">
                   {hackathon.position}
                 </div>
-                <div className="text-lg text-blue-200">
-                  {hackathon.positionDetails}
+                <div className="text-base text-gray-400">
+                  {hackathon.category} • {hackathon.positionDetails}
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-400 text-base mb-6 leading-relaxed">
                 {hackathon.description}
               </p>
 
               {/* Technologies */}
               <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3">
-                  TECHNOLOGIES USED
+                <h4 className="text-base font-medium text-gray-300 mb-3">
+                  Technologies
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {hackathon.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-blue-900 text-blue-300 px-3 py-1 rounded-lg text-sm"
+                      className="bg-gray-900 text-gray-400 px-3 py-1 rounded-md text-xs border border-gray-700"
                     >
                       {tech}
                     </span>
@@ -117,16 +109,16 @@ export default function AchievementsSection() {
 
               {/* Team */}
               <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3">
-                  TEAM • {hackathon.team.name}
+                <h4 className="text-base font-medium text-gray-300 mb-3">
+                  Team: {hackathon.team.name}
                 </h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                   {hackathon.team.members.map((member, i) => (
                     <div
                       key={i}
-                      className="bg-gray-800 rounded-xl p-4 hover:bg-gray-750 transition duration-300"
+                      className="bg-gray-900 border border-gray-700 rounded-lg p-4"
                     >
-                      <h5 className="text-white font-semibold mb-1">
+                      <h5 className="text-white text-base font-medium mb-1">
                         {member.name}
                       </h5>
                       <p className="text-gray-400 text-sm mb-2">
@@ -136,10 +128,10 @@ export default function AchievementsSection() {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-400 text-sm flex items-center gap-1 hover:text-blue-300"
+                        className="text-blue-500 text-xs flex items-center gap-1 hover:text-blue-400"
                       >
                         <svg
-                          className="w-4 h-4"
+                          className="w-3.5 h-3.5"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -154,12 +146,14 @@ export default function AchievementsSection() {
 
               {/* Gallery */}
               <div>
-                <h4 className="text-white font-semibold mb-3">GALLERY</h4>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <h4 className="text-sm font-medium text-gray-400 mb-3">
+                  Gallery
+                </h4>
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
                   {hackathon.images.map((image, i) => (
                     <div
                       key={i}
-                      className="relative aspect-video rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition duration-300"
+                      className="relative aspect-video rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity duration-300 border border-gray-700"
                       onClick={() =>
                         setSelectedHackathon(selectedHackathon === i ? null : i)
                       }
@@ -178,76 +172,12 @@ export default function AchievementsSection() {
           ))}
         </div>
 
-        {/* Competitive Programming Achievement Card - Commented Out
-        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 mb-8 border border-gray-700 hover:border-orange-500 transition duration-300">
-          <div className="flex items-start gap-6 mb-6">
-            <div className="bg-orange-600 p-4 rounded-2xl">
-              <svg
-                className="w-12 h-12 text-white"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-              </svg>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-3xl font-bold text-white mb-2">
-                Competitive Programming Achievements
-              </h3>
-              <p className="text-lg text-gray-300 mb-3">
-                2000+ problems solved across multiple platforms
-              </p>
-            </div>
-          </div>
-
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            Active problem solver with strong algorithmic thinking and
-            problem-solving skills, consistently practicing and improving across
-            multiple competitive programming platforms.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            {competitiveProgramming.map((platform, index) => (
-              <a
-                key={index}
-                href={platform.profileUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`bg-gradient-to-br ${platform.color} p-6 rounded-2xl text-white hover:transform hover:scale-105 transition duration-300 block cursor-pointer hover:shadow-lg`}
-              >
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2">
-                    {platform.solved}
-                  </div>
-                  <div className="text-lg font-semibold mb-1">
-                    {platform.platform}
-                  </div>
-                  <div className="text-sm opacity-90">
-                    Handle: {platform.handle}
-                  </div>
-                  <div className="text-xs opacity-75">
-                    {platform.achievement}
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <p className="text-gray-300 text-sm">
-              Also active on{" "}
-              <span className="text-purple-400 font-semibold">LightOJ</span> and{" "}
-              <span className="text-blue-400 font-semibold">AtCoder</span>
-            </p>
-          </div>
-        </div> */}
-
         {/* AI Training Achievement */}
-        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 mb-8 border border-gray-700 hover:border-green-500 transition duration-300">
-          <div className="flex items-start gap-6">
-            <div className="bg-green-600 p-4 rounded-2xl">
+        <div className="bg-gray-800 border border-gray-700 rounded-xl p-6 md:p-8 hover:border-green-500/50 transition-all duration-300">
+          <div className="flex flex-col md:flex-row md:items-start gap-5">
+            <div className="flex items-center justify-center w-14 h-14 bg-green-600/20 rounded-xl flex-shrink-0">
               <svg
-                className="w-12 h-12 text-white"
+                className="w-7 h-7 text-green-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -261,60 +191,107 @@ export default function AchievementsSection() {
               </svg>
             </div>
             <div className="flex-1">
-              <h3 className="text-3xl font-bold text-white mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2">
                 AI Training Specialist
               </h3>
-              <p className="text-lg text-green-400 mb-3">
+              <p className="text-green-500 text-sm mb-4">
                 Outlier • 2022-Present
               </p>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <p className="text-gray-400 text-sm mb-5 leading-relaxed">
                 Specialized in training and evaluating AI model responses across
                 multiple programming languages. Provided high-quality feedback
                 and annotations to improve AI system performance in technical
                 domains.
               </p>
-              <div className="mb-4">
-                <h5 className="text-white font-semibold mb-2">
-                  Key Responsibilities:
+              <div className="mb-5">
+                <h5 className="text-sm font-medium text-gray-400 mb-3">
+                  Key Responsibilities
                 </h5>
-                <ul className="list-disc list-inside text-gray-300 space-y-1">
-                  <li>
+                <ul className="text-gray-400 text-sm space-y-2">
+                  <li className="flex items-start gap-2">
+                    <svg
+                      className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                     Training and evaluating AI responses using Python, Java, and
                     C++
                   </li>
-                  <li>
+                  <li className="flex items-start gap-2">
+                    <svg
+                      className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                     Data annotation and model evaluation for code generation
                     tasks
                   </li>
-                  <li>
+                  <li className="flex items-start gap-2">
+                    <svg
+                      className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
                     Providing detailed feedback on AI-generated technical
                     content
                   </li>
-                  <li>Quality assurance for AI training datasets</li>
-                  <li>
-                    Consistently received positive performance reviews for
-                    high-quality training data
+                  <li className="flex items-start gap-2">
+                    <svg
+                      className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Quality assurance for AI training datasets
                   </li>
                 </ul>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-green-900 text-green-300 px-3 py-1 rounded-lg text-sm">
+                <span className="bg-gray-900 text-gray-400 px-3 py-1 rounded-md text-xs border border-gray-700">
                   Python
                 </span>
-                <span className="bg-green-900 text-green-300 px-3 py-1 rounded-lg text-sm">
+                <span className="bg-gray-900 text-gray-400 px-3 py-1 rounded-md text-xs border border-gray-700">
                   Java
                 </span>
-                <span className="bg-green-900 text-green-300 px-3 py-1 rounded-lg text-sm">
+                <span className="bg-gray-900 text-gray-400 px-3 py-1 rounded-md text-xs border border-gray-700">
                   C++
                 </span>
-                <span className="bg-green-900 text-green-300 px-3 py-1 rounded-lg text-sm">
+                <span className="bg-gray-900 text-gray-400 px-3 py-1 rounded-md text-xs border border-gray-700">
                   AI Training
                 </span>
-                <span className="bg-green-900 text-green-300 px-3 py-1 rounded-lg text-sm">
+                <span className="bg-gray-900 text-gray-400 px-3 py-1 rounded-md text-xs border border-gray-700">
                   Model Evaluation
-                </span>
-                <span className="bg-green-900 text-green-300 px-3 py-1 rounded-lg text-sm">
-                  Data Annotation
                 </span>
               </div>
             </div>

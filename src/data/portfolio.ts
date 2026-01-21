@@ -3,6 +3,7 @@ export const personalInfo = {
   title: "Full Stack Developer & Dedicated Problem Solver",
   subtitle: "Solved 2000+ problems across multiple platforms • Building scalable web applications",
   email: "ahmadbadhon28@gmail.com",
+  phone: "+8801766164681",
   location: "Sylhet, Bangladesh",
   github: "https://github.com/BadhonAhmad",
   linkedin: "https://www.linkedin.com/in/badhon-ahmad-5a5894225/",
