@@ -84,6 +84,21 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Agribazaar",
+    subtitle: "AI-Powered Agri-Marketplace",
+    period: "2024",
+    badge: "JavaFest-2024 project",
+    description: "Developed an AI-powered agri-marketplace enabling farmers to list products, receive intelligent crop recommendations, complete OTP-verified transactions, communicate in real time, and make secure online payments within a scalable microservices architecture.",
+    technologies: ["Spring Boot", "Spring Security", "Next.js", "TypeScript", "MongoDB", "Azure OpenAI", "Stripe"],
+    features: [
+      "Developed AI-powered agri-marketplace enabling farmers to list products with intelligent crop recommendations",
+      "Implemented OTP-verified transactions and real-time communication between buyers and sellers",
+      "Integrated secure online payments with Stripe within a scalable microservices architecture"
+    ],
+    githubUrl: "https://github.com/md-abdullah-92/sust_unknowns_agribazaar"
+  },
+  {
+    id: 3,
     title: "EduVerse",
     subtitle: "AI-Powered E-Learning Platform",
     period: "Jun-2025",
@@ -98,7 +113,7 @@ export const projects = [
     githubUrl: "https://github.com/md-abdullah-92/Eduverse"
   },
   {
-    id: 3,
+    id: 4,
     title: "SnapLink - URL Shortener",
     subtitle: "Modern URL Shortening Application",
     period: "2025",
@@ -114,7 +129,7 @@ export const projects = [
     videoUrl: "https://www.youtube.com/watch?v=mdbHcTmcLIY"
   },
   {
-    id: 4,
+    id: 5,
     title: "SmartPrescription",
     subtitle: "Modern Clinic Management System",
     period: "2025",
@@ -131,7 +146,7 @@ export const projects = [
     videoUrl: "https://www.youtube.com/watch?v=kcfUuJgYQJo"
   },
   {
-    id: 5,
+    id: 6,
     title: "ACCOMO Android App",
     subtitle: "Rented Resident Management Platform",
     period: "Mar-2024",
@@ -146,7 +161,7 @@ export const projects = [
     githubUrl: "https://github.com/BadhonAhmad/ACCOMO-Android-App"
   },
   {
-    id: 6,
+    id: 7,
     title: "Child Learning Web",
     subtitle: "Interactive Educational Platform for Children",
     period: "Dec-2023",
