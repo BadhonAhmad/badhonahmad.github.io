@@ -146,6 +146,37 @@ export const projects = [
     videoUrl: "https://www.youtube.com/watch?v=kcfUuJgYQJo"
   },
   {
+    id: 8,
+    title: "FinManagement",
+    subtitle: "Role-Based Personal Finance Management System",
+    period: "2026",
+    description: "A full-stack finance management platform with dashboards, advanced record management, role-based access control, and secure JWT authentication.",
+    technologies: [
+      "Spring Boot",
+      "Java 17",
+      "SQLite",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "JWT",
+      "Recharts",
+      "React Hook Form",
+      "Zod",
+      "Bucket4j"
+    ],
+    features: [
+      "Built dashboard with summary cards, income/expense charts, category breakdowns, and trend lines",
+      "Implemented financial records module with add/edit/delete, filtering by type/category/date, note search, and pagination",
+      "Designed role-based access with Viewer (dashboard), Analyst (records + insights), and Admin (full CRUD + user management)",
+      "Implemented JWT authentication with login/register and token refresh using Spring Security (HS512, 24h expiry)",
+      "Added admin panel for user management, role updates, and system-wide summaries",
+      "Integrated Swagger API docs and request rate limiting (60 req/min per client)"
+    ],
+    githubUrl: "https://github.com/BadhonAhmad/FinManagement",
+    videoUrl: "https://www.youtube.com/watch?v=8_ACB_MY4-s"
+  },
+  {
     id: 6,
     title: "ACCOMO Android App",
     subtitle: "Rented Resident Management Platform",
