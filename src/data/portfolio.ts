@@ -181,11 +181,21 @@ export const navigationItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Programming", href: "#competitive-programming" },
+  { name: "Skills", href: "#skills" },
   { name: "Achievements", href: "#achievements" },
   { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
+  { name: "Leadership", href: "#leadership" },
   { name: "Contact", href: "#contact" }
 ];
+
+export const leadershipInvolvement = {
+  title: "Leadership & Community Involvement",
+  points: [
+    "Led as Captain of the intra-hall short pitch cricket team and secured the championship title.",
+    "Achieved dual champion in intra-hall table tennis; reached semi-finals in the varsity open tournament.",
+    "Actively participate in football, badminton and volleyball, demonstrating teamwork and sportsmanship."
+  ]
+};
 
 export const hackathonAchievements = [
   {
