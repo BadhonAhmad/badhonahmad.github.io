@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Nobel Ahmad Badhon",
-  title: "Full Stack Developer & Dedicated Problem Solver",
+  title: "Aspiring Software Engineer & Dedicated Problem Solver",
   subtitle: "Solved 2000+ problems across multiple platforms • Building scalable web applications",
   email: "ahmadbadhon28@gmail.com",
   phone: "+8801766164681",

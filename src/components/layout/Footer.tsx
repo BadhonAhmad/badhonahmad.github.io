@@ -12,7 +12,7 @@ export default function Footer() {
               {personalInfo.name}
             </h3>
             <p className="text-gray-400 text-sm">
-              Full Stack Developer & Problem Solver
+              Aspiring Software Engineer & Problem Solver
             </p>
           </div>
 

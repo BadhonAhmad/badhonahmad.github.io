@@ -36,13 +36,13 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Full Stack Developer Card */}
+          {/* Aspiring Software Engineer Card */}
           <div className="bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
             <div className="flex items-center justify-center w-11 h-11 bg-purple-600/20 rounded-lg mb-4">
               <BriefcaseIcon className="w-6 h-6 text-purple-500" />
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">
-              Full Stack Developer
+              Aspiring Software Engineer
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Web Development, Mobile Apps (Android/Kotlin), and Desktop

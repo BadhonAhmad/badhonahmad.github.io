@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nobel Ahmad Badhon - Full Stack Developer",
+  title: "Nobel Ahmad Badhon - Aspiring Software Engineer",
   description:
-    "Full Stack Developer & Problem Solver with 2000+ competitive programming problems solved. Experienced in Next.js, React, Node.js, and AI/ML technologies.",
+    "Aspiring Software Engineer & Problem Solver with 2000+ competitive programming problems solved. Experienced in Next.js, React, Node.js, and AI/ML technologies.",
 };
 
 export default function RootLayout({
